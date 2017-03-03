@@ -1,4 +1,4 @@
 package lab7_davidguillen;
-public class Empleados {
+public class Familiar_Padre {
     
 }
