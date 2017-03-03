@@ -4,6 +4,7 @@ import java.awt.Color;
 
 public class Persona {
     private int edad;
+    private String id;
     private String nacionalidad;
     private String lugar_nacimiento;
     private String nombre;
@@ -13,8 +14,9 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int edad, String nacionalidad, String lugar_nacimiento, String nombre, Color color_piel, Familiar familiar) {
+    public Persona(int edad,String id, String nacionalidad, String lugar_nacimiento, String nombre, Color color_piel, Familiar familiar) {
         this.edad = edad;
+        this.id = id;
         this.nacionalidad = nacionalidad;
         this.lugar_nacimiento = lugar_nacimiento;
         this.nombre = nombre;
@@ -30,6 +32,14 @@ public class Persona {
         this.edad = edad;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
     public String getNacionalidad() {
         return nacionalidad;
     }
@@ -72,7 +82,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "edad=" + edad + ", nacionalidad=" + nacionalidad + ", lugar_nacimiento=" + lugar_nacimiento + ", nombre=" + nombre + ", color_piel=" + color_piel + ", familiar=" + familiar + '}';
+        return "Persona{" + "edad=" + edad + ", id=" + id + ", nacionalidad=" + nacionalidad + ", lugar_nacimiento=" + lugar_nacimiento + ", nombre=" + nombre + ", color_piel=" + color_piel + ", familiar=" + familiar + '}';
     }
     
 }
