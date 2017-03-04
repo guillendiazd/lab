@@ -1,20 +1,23 @@
 package lab7_davidguillen;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
-public class Clientes {
+public class Clientes extends Persona{
     private int ticket;
     private int dinero;
     ArrayList<Ordenes> ordenes = new ArrayList();
 
     public Clientes() {
+        super();
     }
 
-    public Clientes(int ticket, int dinero) {
+    public Clientes(int ticket, int dinero, int edad, String id, String nacionalidad, String lugar_nacimiento, String nombre, Color color_piel, Familiar familiar) {
+        super(edad, id, nacionalidad, lugar_nacimiento, nombre, color_piel, familiar);
         this.ticket = ticket;
         this.dinero = dinero;
     }
-
+    
     public int getTicket() {
         return ticket;
     }

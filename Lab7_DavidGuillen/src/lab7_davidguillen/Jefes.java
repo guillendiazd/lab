@@ -1,8 +1,9 @@
 package lab7_davidguillen;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
-public class Jefes {
+public class Jefes extends Persona{
     private String seccion_trabajo;
     ArrayList<Venta> venta = new ArrayList();
     ArrayList<Empleados> empleado = new ArrayList();
@@ -10,14 +11,16 @@ public class Jefes {
     private int ganancias;
 
     public Jefes() {
+        super();
     }
 
-    public Jefes(String seccion_trabajo, int numero_clientes, int ganancias) {
+    public Jefes(String seccion_trabajo, int numero_clientes, int ganancias, int edad, String id, String nacionalidad, String lugar_nacimiento, String nombre, Color color_piel, Familiar familiar) {
+        super(edad, id, nacionalidad, lugar_nacimiento, nombre, color_piel, familiar);
         this.seccion_trabajo = seccion_trabajo;
         this.numero_clientes = numero_clientes;
         this.ganancias = ganancias;
     }
-
+    
     public String getSeccion_trabajo() {
         return seccion_trabajo;
     }
@@ -26,11 +29,11 @@ public class Jefes {
         this.seccion_trabajo = seccion_trabajo;
     }
 
-    public ArrayList<Venta> getVenta_gatos() {
+    public ArrayList<Venta> getVenta() {
         return venta;
     }
 
-    public void setVenta_gatos(ArrayList<Venta> venta_gatos) {
+    public void setVenta(ArrayList<Venta> venta_gatos) {
         this.venta = venta_gatos;
     }
 

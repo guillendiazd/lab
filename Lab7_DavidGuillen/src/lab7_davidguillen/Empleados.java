@@ -1,5 +1,8 @@
 package lab7_davidguillen;
-public class Empleados {
+
+import java.awt.Color;
+
+public class Empleados extends Persona {
     private String trabajo;
     private int hora_entrada;
     private int hora_salida;
@@ -7,16 +10,18 @@ public class Empleados {
     private String estado;
 
     public Empleados() {
+        super();
     }
 
-    public Empleados(String trabajo, int hora_entrada, int hora_salida, int sueldo, String estado) {
+    public Empleados(String trabajo, int hora_entrada, int hora_salida, int sueldo, String estado, int edad, String id, String nacionalidad, String lugar_nacimiento, String nombre, Color color_piel, Familiar familiar) {
+        super(edad, id, nacionalidad, lugar_nacimiento, nombre, color_piel, familiar);
         this.trabajo = trabajo;
         this.hora_entrada = hora_entrada;
         this.hora_salida = hora_salida;
         this.sueldo = sueldo;
         this.estado = estado;
     }
-
+    
     public String getTrabajo() {
         return trabajo;
     }
